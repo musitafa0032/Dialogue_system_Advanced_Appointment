@@ -4,6 +4,7 @@ declare module 'react-speech-kit';
 
 interface SDSContext {
     recResult: string;
+    count: 0;
     nluData: any;
     ttsAgenda: string;
     query: string;
@@ -13,6 +14,7 @@ interface SDSContext {
 type SDSEvent =
     | { type: 'CLICK' }
     | { type: 'RECOGNISED' }
+    | { type: 'MAXSPEECH' }
     | { type: 'ASRRESULT', value: string }
     | { type: 'ENDSPEECH' }
     | { type: 'LISTEN' }
